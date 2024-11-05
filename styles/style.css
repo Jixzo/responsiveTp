@@ -1,0 +1,68 @@
+a{
+    color: aliceblue;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   color: aliceblue; 
+    grid-area: nav;   
+}
+@media (max-width:768px) {
+    nav{
+        flex-direction: column;
+        font-size:small;
+        background-image: url(../_imgs/DALL·E\ 2024-11-05\ 15.48.07\ -\ A\ terrifying\,\ dark\ fantasy\ sea\ monster\ from\ the\ deep\ ocean.\ The\ creature\ is\ enormous\,\ with\ a\ grotesque\,\ otherworldly\ appearance\,\ featuring\ multiple\ te.webp);
+        height: 100px;
+        position: 50% 50%;
+
+    }  
+    header{
+        display: none;
+        color: white;
+    }
+ }
+ body{
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr 20fr;
+    box-sizing: border-box;
+    margin: 0px;
+    height: 100vh;
+    grid-template-areas: 
+         "header header"
+         "nav nav"
+         "aside main"
+         "footer footer";
+}
+header{
+    grid-area: header;
+    background-image: url(../_imgs/ccf42397-8dfd-40cb-99f5-341333502fbc.webp);
+}
+aside{
+    grid-area: aside;
+    background-color: rgb(8, 3, 177);
+}
+main{
+    grid-area: main;
+    background-color: rgb(10, 3, 105);
+}
+footer{
+    grid-area: footer;
+    color: yellow;
+}
+@media (max-width:768px) {
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 15fr 1fr;
+        grid-template-areas: 
+        "nav"
+        "aside"
+        "main"
+        "footer";
+    
+    }  
+}
